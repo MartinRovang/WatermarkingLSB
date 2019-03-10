@@ -2,7 +2,7 @@
 
 
 ## Demo
-
+    WATERMARKED IMAGE                                   EXTRACTED IMAGE
 ![Watermarked](https://i.imgur.com/TK6uXjX.png)
 
 
@@ -11,6 +11,12 @@ Watermark image:<br/>
 ```python main.py -w image.jpg watermark.jpg```<br/>
 Extract watermark:<br/>
 ```python main.py -e watermarkedimage.png```
+
+
+# Dependencies
+* Numpy<br/>
+* Matplotlib<br/>
+* PIL
 
 ### Note
 
