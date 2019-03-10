@@ -3,6 +3,7 @@
 
 ## Demo
 
+    WATERMARKED IMAGE                                      EXTRACTED IMAGE
 ![Watermarked](https://i.imgur.com/TK6uXjX.png)
 
 
