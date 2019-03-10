@@ -16,7 +16,6 @@ Extract watermark:<br/>
 # Dependencies
 * Numpy<br/>
 * Matplotlib<br/>
-* PIL
 
 ### Note
 
