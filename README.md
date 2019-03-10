@@ -2,7 +2,12 @@
 
 
 ## Demo
+<<<<<<< HEAD:README.md
     WATERMARKED IMAGE                                   EXTRACTED IMAGE
+=======
+
+    WATERMARKED IMAGE                                      EXTRACTED IMAGE
+>>>>>>> 00d81af0534ff8da9eeb1d43151bd5cc8e3bc358:release/README.md
 ![Watermarked](https://i.imgur.com/TK6uXjX.png)
 
 
