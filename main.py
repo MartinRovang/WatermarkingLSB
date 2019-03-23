@@ -23,15 +23,29 @@ if flag == '-e':
 
 
 if flag == '-w':
-    originalim_path = sys.argv[2]
-    image = plt.imread(originalim_path)
+    original_image = sys.argv[2]
+    watermark_image = sys.argv[3]
+    watermark = plt.imread(watermark_image)
+    image = plt.imread(original_image)
     image.setflags(write=1)
+    watermark.setflags(write=1)
+
+    imagex, imagey, *rest1 = image.shape
+    waterx, watery, *rest2 = watermark.shape
+    if imagex < waterx or imagey < watery:
+        raise Exception('The watermark image is too large compared to image.')
+    if original_image[-3:] == 'png':
+        image *= 255
+        image = image[:,:,:3]
+    if watermark_image[-3:] == 'png':
+        watermark *= 255
+        watermark = watermark[:,:,:3]
     image = image.astype('uint8')
-    w_path = sys.argv[3]
-    watermark = plt.imread(w_path)
+    watermark = watermark.astype('uint8')
+
     wtemp = np.zeros(image.shape)
     wtemp[0:watermark.shape[0], 0:watermark.shape[1]] = watermark
-    # Make sure they are uint8
+    # Make sure it is uint8
     wtemp = wtemp.astype('uint8')
 
 
@@ -74,7 +88,6 @@ if flag == '-w':
 if flag == '-e':
     print('Extracting image...')
     dewatermarked = vecdewatermark(extractim)
-    print(np.unique(dewatermarked))
     plt.figure()
     plt.axis('off')
     plt.imshow(dewatermarked)
