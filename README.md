@@ -19,5 +19,5 @@ Extract watermark:<br/>
 
 ### Note
 
-Since LSB is very fragile any compression like jpg etc. will most likely break the watermark.
+Since LSB is very fragile, any compression like jpg etc. will most likely break the watermark.
 
